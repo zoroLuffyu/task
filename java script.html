@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #counting {
+            font-weight:bolder;
+            font-size:110px;
+
+        }
+        button {
+            color:black;
+            font-size:large;
+            font-weight:bolder;
+        }
+        button:hover {
+            color:white;
+         background-color: black;
+        }
+        .parent { 
+            text-align:center;
+        }
+        .btn{text-align: center;}
+    </style>
+</head>
+<body> 
+    <div class="parent">
+        <span id="counting"></span>
+    </div>
+    <div class="btn">
+    <button onclick="increase()">increase</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="decrease()">decrease</button></div>
+<script>
+    let data =0;
+    document.getElementById("counting").innerText=data;
+    function increase() {
+        data = ++data;
+    document.getElementById("counting").innerText= data;
+        if( data > 0) {
+ document.getElementById("counting").style.color= "green";
+        }
+        else if ( data = 0) {
+document.getElementById(counting).style.color= "black";
+        }
+    }
+    function decrease() {
+        data= --data;
+ document.getElementById("counting").innerText=data;
+        if(data < 0) {
+ document.getElementById("counting").style.color = "red";
+       }
+       else if (data ==0) {
+ document.getElementById("counting").style.color = "black";
+       }
+    }
+    function reset() {
+        data=0;
+ document.getElementById("counting").innerText=data;
+ document.getElementById("counting").style.color ="black";
+        
+ 
+}
+</script>
+</body>
+</html>
