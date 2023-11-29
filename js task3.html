@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Sutudents Marks</title>
+</head>
+<body>
+   
+        <form>
+            <input type="number" placeholder="Maths" id="maths" autofocus><br><br>
+            <input type="number" placeholder="CS" id="cs"><br><br>
+            <input type="number" placeholder="Evs" id="evs"><br><br>
+            <input type="number" placeholder="Eng" id="eng"><br><br>
+            <button type="button" onclick="Total()">Total</button>
+        </form>
+
+      
+      <script>
+          
+          function Total(){
+            let maths=document.getElementById('maths').value;
+            maths= Number.parseInt(maths);
+
+           let cs =document.getElementById('cs').value;
+           cs= Number.parseInt(cs);
+
+           let evs =document.getElementById('evs').value;
+           evs = Number.parseInt(evs);
+
+           let eng= document.getElementById('eng').value;
+           eng= Number.parseInt(eng);
+
+
+            let total =(maths + cs + evs + eng)/400*100;
+            
+
+        if (total>=85){
+            document.write(`Your percetage is ${total}% and your grade is A `);
+        }
+        else if(total<85 && total >=70){
+            document.write(`Your percetage is ${total}% and your grade is B `);
+        }
+        else if(total<70 && total >=55){
+            document.write(`Your percetage is ${total}% and your grade is C`);
+        }
+        else if(total<55 && total >=40){
+            document.write(`Your percetage is ${total}% and your grade is D`);
+        }
+        else if(total<=35){
+            document.write(`Your percetage is ${total}% and your grade is Fail`);
+        }
+
+       
+    }
+      </script>
+</body>
+</html>
